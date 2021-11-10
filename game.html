@@ -18,7 +18,7 @@
 		}
 		.text{
 			width: 100%;
-			color: rgb(251, 255, 8);
+			color: rgba(229, 231, 90, 0.904);
 			text-align: center;
 			font-size: 35px;
 		}
@@ -69,7 +69,7 @@
 			<source src="boca_theme.mp3" type="audio/mpeg">
 		</audio></div>
 		<div class="text s1">Encuentra los pares!</div>
-		<div class="text s2">intento n°: <span id="intentos">0</span></div>
+		<div class="text s2">intento n: <span id="intentos">0</span></div>
 		<div class="content-blocks" id="space-imgs"></div>
 	</div>
 	<script type="text/javascript">
@@ -144,7 +144,7 @@
 								}
 								if (tam_game==counter_enc) {
 									alert("Ganaste!");
-									
+									//playSound("victoria.mp3");
 								}
 							}else{
 								for (var i = 0; i < ar.length; i++) {
@@ -169,6 +169,10 @@
 		for (var i = 0; i < ar_inicial.length; i++) {
 			ar_inicial[i].addEventListener('click',myfunction,false);
 		}
+		function playSound(url) {
+         const audio = new Audio(url);
+         audio.play();
+        }
 	</script>
 </body>
 </html>

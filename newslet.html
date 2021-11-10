@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Registrate </title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" href="css/cabecera.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+</head>
+
+<body>
+<!-- mandamos con el metodo "post" a la pagina "register.php" todos los datos-->
+<form action="register.php" method="post">
+  <h1 class="animate__animated animate__backInLeft">Registrate</h1>
+  <p>Usuario <input type="text" placeholder="ingrese su nombre" name="fname"></p>
+  <p>Apellido <input type="text" placeholder="ingrese su apellido" name="lname"></p>
+  <p>Password <input type="password" placeholder="ingrese su Pass" name="pass"></p>
+  <p>Repetir Password <input type="password" placeholder="repita su Pass" name="rpass"></p>
+  <p><input type="submit" value="Registrarse"></p>
+
+</form>
+<form action="index.html">
+  Si ya estasa registrado:
+  <input type="submit" value="Inicia Sesion">
+</form>
+
+</body>
+
+</html>
