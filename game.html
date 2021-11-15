@@ -71,6 +71,9 @@
 		<div class="text s1">Encuentra los pares!</div>
 		<div class="text s2">intento n: <span id="intentos">0</span></div>
 		<div class="content-blocks" id="space-imgs"></div>
+		 <form name="fwin" id="fwin" action="win.php" method="get">
+			 <input type="hidden" name="score" id="score">
+		 </form>
 	</div>
 	<script type="text/javascript">
 		var ar_img=[];
@@ -145,6 +148,8 @@
 								if (tam_game==counter_enc) {
 									alert("Ganaste!");
 									//playSound("victoria.mp3");
+									document.fwin.score.value=intentos+1;
+									document.fwin.submit();
 								}
 							}else{
 								for (var i = 0; i < ar.length; i++) {
