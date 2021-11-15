@@ -18,8 +18,12 @@ $fname=$_GET['score'];
 </head>
 <body>
     <form action="index.html">
-        <h1>GANASTE!!! 🎇</h1>
+        <h1 class="animate__animated animate__backInLeft"> <p>GANASTE!!! 🎇</p></h1>
+        Puntuacion: <?php echo $fname;?>
         <input type="submit" value="volver al inicio" >
+        <audio controls autoplay>
+			<source src="boca_theme.mp3" type="audio/mpeg">
+		</audio>
     </form>
     <script src="confetti.js"></script>
     <!-- Confetti  JS-->

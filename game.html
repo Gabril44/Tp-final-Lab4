@@ -66,7 +66,7 @@
 	<div class="loading-content">
 		<div class="text">Juego de Memoria Boca! 
 			<audio controls autoplay>
-			<source src="boca_theme.mp3" type="audio/mpeg">
+			<source src="cancion_fondo.mp3" type="audio/mpeg">
 		</audio></div>
 		<div class="text s1">Encuentra los pares!</div>
 		<div class="text s2">intento n: <span id="intentos">0</span></div>
@@ -116,7 +116,6 @@
 		dom.innerHTML=html;
 
 		var ar_inicial=document.getElementsByClassName("blocks");
-
 		var id_ant=0;
 		var counter_clicks=0;
 		var img_ant=0;
@@ -146,7 +145,7 @@
 									}
 								}
 								if (tam_game==counter_enc) {
-									alert("Ganaste!");
+									//alert("Ganaste!");
 									//playSound("victoria.mp3");
 									document.fwin.score.value=intentos+1;
 									document.fwin.submit();
@@ -174,10 +173,6 @@
 		for (var i = 0; i < ar_inicial.length; i++) {
 			ar_inicial[i].addEventListener('click',myfunction,false);
 		}
-		function playSound(url) {
-         const audio = new Audio(url);
-         audio.play();
-        }
 	</script>
 </body>
 </html>
