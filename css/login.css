@@ -34,8 +34,8 @@ input[type='submit']{
 	width: calc(80% - 20px);
 	margin: 0 10%;
 	margin-top: 22px;
-	border: none;
-	
+	border: none;	
+	margin-bottom: 30px;
 }
 
 
@@ -127,4 +127,35 @@ header a{
 	position: absolute;
 	top: -50px;
 	left: calc(50% - 50px);
+}
+#tabla-container{
+	margin: 100px 100px 10px 60px;
+
+	width: 600px;
+}
+table{
+background-color: rgba(44, 44, 202, 0.788);
+text-align: left;
+width: 100%;
+
+
+}
+
+th, td{
+padding: 20px;
+
+
+}
+thead{
+	background-color: rgba(27, 20, 20, 0.753);
+	border-bottom: solid 5px blue;;
+	color: white;
+}
+
+tr:nth-child(even){
+	background-color: rgba(197, 197, 51, 0.712);
+}
+tr:hover td{
+	background-color: rgba(253, 253, 253, 0.329);
+	color: grey;
 }

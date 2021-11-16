@@ -1,7 +1,26 @@
 <?php
+session_start();
+$score=$_GET['score'];
+$uname = $_SESSION['usuario'];
 
-$fname=$_GET['score'];
 
+$conexion=mysqli_connect("lab4.czqsnex935ev.sa-east-1.rds.amazonaws.com","admin","Lab4utn2021","memorygame");
+
+$consulta="SELECT * FROM users where username='$uname'";
+$resultado=mysqli_query($conexion,$consulta);
+while($mostrar = mysqli_fetch_array($resultado)){
+ $primerScore = $mostrar['score'];   
+
+if($score<$primerScore){
+      $update = "UPDATE users SET score='$score' WHERE username='$uname'";
+      if($conexion->query($update) === TRUE){
+
+      }else{
+          echo "error";
+      }
+ }
+}
+mysqli_close($conexion);
 //echo "tu puntaje es ". $fname;
 ?>
 <!DOCTYPE html>
@@ -17,9 +36,9 @@ $fname=$_GET['score'];
     <title>Ganaste!</title>
 </head>
 <body>
-    <form action="index.html">
+    <form action="inicio.php">
         <h1 class="animate__animated animate__backInLeft"> <p>GANASTE!!! 🎇</p></h1>
-        Puntuacion: <?php echo $fname;?>
+        Puntuacion: <?php echo $uname. " ".$score ." ". $primerScore;?>
         <input type="submit" value="volver al inicio" >
         <audio controls autoplay>
 			<source src="boca_theme.mp3" type="audio/mpeg">
