@@ -62,7 +62,7 @@ input[type='submit']{
 
 }
 body{
-	background-image:url(../IMG/fondolegal.jpg);
+	background-image:url('fondolegal.jpg');
 	width: 100%;
 	height:100%vh;
 	background-size: cover;
