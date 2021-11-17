@@ -38,7 +38,7 @@ mysqli_close($conexion);
 <body>
     <form action="inicio.php">
         <h1 class="animate__animated animate__backInLeft"> <p>GANASTE!!! 🎇</p></h1>
-        Puntuacion: <?php echo $uname. " ".$score ." ". $primerScore;?>
+        Puntuacion: <?php echo $score;?>
         <input type="submit" value="volver al inicio" >
         <audio controls autoplay>
 			<source src="boca_theme.mp3" type="audio/mpeg">

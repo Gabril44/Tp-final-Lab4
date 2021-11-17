@@ -26,15 +26,34 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-//INSERTAMOS EN LA BASE DE DATOS EL USUARIO
+//Comprobamos si ya existe ese usuario
 
-$sql_command = "INSERT INTO users (username, email, password)
-VALUES ('$uname', '$email', '$upass')";
+$consulta="SELECT*FROM users where username='$uname'";
+$consultaf=mysqli_query($conn,$consulta);
 
-if ($conn->query($sql_command) === TRUE) {
-	header("Location: index.html");
-} else {
-    echo "Error: " . $sql_command . "<br>" . $conn->error;
+$filas=mysqli_num_rows($consultaf);
+
+if($filas){
+  
+    include("newslet.html");
+	
+
+  ?>
+  <h1 class="bad">YA EXISTE ESE USUARIO</h1>
+  <?php
+
+}else{ //si no existe, lo agregamos a la base d datos
+	$sql_command = "INSERT INTO users (username, email, password) VALUES ('$uname', '$email', '$upass')";
+    if ($conn->query($sql_command) === TRUE) {
+		header("Location: index.html");
+	} else {
+		echo "Error: " . $sql_command . "<br>" . $conn->error;
+	}
+	
 }
+
+
+
+
 $conn->close();
 ?>

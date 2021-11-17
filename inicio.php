@@ -10,7 +10,13 @@
     <title>Inicio</title>
 </head>
 <body>
-   <header></header>
+   <header>
+       <nav>
+           <ul>
+               <li> <a href="cerrar_sesion.php"> CERRAR SESION</a> <a href="editarnewslet.php"> EDITAR PERFIL </a> </li>
+           </ul>
+       </nav>
+   </header>
     <main>
     <form>
         <h1 class="animate__animated animate__backInLeft">Ranking mundial</h1>
