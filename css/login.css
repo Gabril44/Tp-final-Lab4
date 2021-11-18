@@ -120,7 +120,7 @@ header a{
     transition: all ease 300ms;
 }
 .login-box{
-	background-image:url(../IMG/logogae.png);
+	/*background-image:url(../IMG/logogae.png);*/
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
@@ -129,9 +129,9 @@ header a{
 	left: calc(50% - 50px);
 }
 #tabla-container{
-	margin: 100px 100px 60px 60px;
+	margin: 100px 100px 10px 15px;
 
-	width: 600px;
+	width: 500px;
 }
 table{
 background-color: rgba(44, 44, 202, 0.788);
