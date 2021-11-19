@@ -13,7 +13,15 @@ function val($data) {
 	return $data;
 }
 
+if($upass != $rupass){
+	
+    include("newslet.html");
+	
 
+  ?>
+  <h1 class="bad">NO COINCIDEN LAS CONTRASEÑAS</h1>
+  <?php
+}else{
 $servername = "lab4.czqsnex935ev.sa-east-1.rds.amazonaws.com";
 $username = "admin";
 $password = "Lab4utn2021";
@@ -56,4 +64,5 @@ if($filas){
 
 
 $conn->close();
+}
 ?>
