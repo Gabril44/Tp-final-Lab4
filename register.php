@@ -22,10 +22,10 @@ if($upass != $rupass){
   <h1 class="bad">NO COINCIDEN LAS CONTRASEÑAS</h1>
   <?php
 }else{
-$servername = "lab4.czqsnex935ev.sa-east-1.rds.amazonaws.com";
-$username = "admin";
-$password = "Lab4utn2021";
-$dbname = "memorygame";
+$servername = "sql10.freesqldatabase.com";
+$username = "sql10455993";
+$password = "Z7IlgD8xzu";
+$dbname = "sql10455993";
 
 // Abrir conexion con base de datos
 $conn = new mysqli($servername, $username, $password, $dbname);

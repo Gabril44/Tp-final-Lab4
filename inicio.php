@@ -29,7 +29,7 @@
                 </thead>
                 <tr>
                 <?php
-                  $conexion=mysqli_connect("lab4.czqsnex935ev.sa-east-1.rds.amazonaws.com","admin","Lab4utn2021","memorygame");
+                  $conexion=mysqli_connect("sql10.freesqldatabase.com","sql10455993","Z7IlgD8xzu","sql10455993");
                   $consulta = "SELECT username, score FROM users ORDER BY score ASC LIMIT 10";
                   $resultado=mysqli_query($conexion,$consulta);
                   while($mostrar = mysqli_fetch_array($resultado)){
